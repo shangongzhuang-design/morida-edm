@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MORIDA｜產品使用指南</title>
+  <style>
+    body { font-family:'Noto Sans TC',sans-serif; margin:0; background:#f5f5f5; }
+    .wrap { max-width:1100px; margin:auto; padding:28px 20px; }
+    header { text-align:center; margin-bottom:24px; }
+    header img { width:180px; }
+    h1 { text-align:center; font-size:32px; font-weight:800; margin:20px 0; color:#b3002d; }
+    .grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:32px; }
+    .item {
+  background:#fff;
+  width:260px;
+  min-height:300px;
+  border-radius:20px;
+  padding:24px 20px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  cursor:pointer;
+  transition:.3s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+}
+    .item:hover { transform:translateY(-6px); box-shadow:0 10px 26px rgba(0,0,0,.16); }
+    .item img {
+  width:140px;
+  height:140px;
+  object-fit:contain;
+  margin:0 auto 16px;
+  display:block;
+}
+    footer { text-align:center; margin:40px 0 20px; color:#666; font-size:15px; }
+    .detail-box { background:#fff; padding:32px; border-radius:20px; box-shadow:0 8px 28px rgba(0,0,0,.12); }
+    .detail-box img { width:200px; display:block; margin:0 auto 20px; }
+    .detail-box h2 { font-size:28px; color:#b3002d; margin-bottom:20px; text-align:center; }
+    .detail-box h3 { font-size:20px; margin-top:26px; border-left:4px solid #b3002d; padding-left:10px; }
+    .detail-box p { font-size:16px; line-height:1.8; color:#444; }
+    .fade-in { animation:fadeIn .5s ease forwards; }
+    @keyframes fadeIn { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;} }
+    @media(max-width:768px){ h1{font-size:26px;} .item{width:100%;} }
+  .back-wrap{display:flex;justify-content:flex-start;margin-bottom:24px;}
+.back-btn{padding:10px 22px;font-size:15px;border-radius:999px;border:none;background:#b3002d;color:#fff;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.18);transition:.25s;}
+.back-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.22);} 
+
+
+</style>
+  <script>
+    function showProduct(id){
+      document.querySelector('.grid').style.display='none';
+      const area=document.getElementById('product-area');
+      const detail=document.getElementById(id).innerHTML;
+      area.innerHTML=`
+        <div class="detail-box fade-in">
+          <div class="back-wrap"><button onclick="goBack()" class="back-btn">← 返回產品列表</button></div>
+          ${detail}
+        </div>
+      `;
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+    function goBack(){
+      document.getElementById('product-area').innerHTML='';
+      document.querySelector('.grid').style.display='flex';
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+  </script>
+</head>
+<body>
+<div class="wrap">
+  <header>
+  <!-- Logo path fixed: ensure logo.png is in the same directory as index.html -->
+  <img src="logo.png" alt="MORIDA LOGO" style="width:180px; display:block; margin:0 auto;">
+</header>
+  <h1>產品使用指南</h1>
+  <div class="grid">
+    <div class="item" onclick="showProduct('p1')"><img src="massage.png" alt="旋擊按摩儀"><h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">旋擊按摩儀</h3></div>
+    <div class="item" onclick="showProduct('p2')"><img src="comb.png" alt="磁波能量梳"><h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">磁波能量梳</h3></div>
+    <div class="item" onclick="showProduct('p3')"><img src="patch.jpg" alt="260 能量貼布"><h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">260 能量貼布</h3></div>
+    <div class="item" onclick="showProduct('p4')"><img src="water_tank.png" alt="磁化整水缸"><h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">磁化整水缸</h3></div>
+    <div class="item" onclick="showProduct('p5')"><img src="sixqi.png" alt="六氣口含錠"><h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">六氣口含錠</h3></div>
+    <div class="item" onclick="showProduct('p6')"><img src="magic_tea.png" alt="神纖茶"><h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">神纖茶</h3></div>
+    <div class="item" onclick="showProduct('p7')"><img src="tea_drop.png" alt="六氣茶滴精"><h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">六氣茶滴精</h3></div>
+  </div>
+
+  <div id="product-area" style="margin-top:40px;"></div>
+
+  <footer>健康自己 ｜ 守護家人 ｜ 關懷社會</footer>
+
+  <div id="p1" style="display:none;">
+  <img src="massage.png" alt="旋擊按摩儀產品圖" style="width:220px; display:block; margin:0 auto 24px;">
+  <h2>旋擊按摩儀｜使用說明</h2>
+
+  <div style="max-width:720px;margin:0 auto 32px;text-align:center;">
+  <a href="https://youtu.be/mMnHIQbdSB4" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+    <img src="https://img.youtube.com/vi/mMnHIQbdSB4/hqdefault.jpg" alt="旋擊按摩儀 使用影片" style="width:100%;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.15);">
+    <div style="margin-top:12px;font-size:16px;color:#b3002d;font-weight:700;">▶ 點擊觀看操作影片（YouTube）</div>
+  </a>
+</div>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">產品特點</h3>
+  <p>旋擊式按摩設計，提供穩定震動輸出，適用於全身各部位放鬆與日常舒緩。</p>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">使用方式</h3>
+  <p>按著旋擊按摩儀底下的開關來啟動，本產品具備 3 段速度，請依個人需求與感受進行調整。</p>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">注意事項</h3>
+  <p>
+    使用電器用品時，請特別注意並遵守下列安全事項，以確保安全及正確使用本產品：<br><br>
+    ・使用前請務必詳細參閱操作手冊。<br>
+    ・請正確姿勢手握緊本產品，防止摔落地面導致故障或破損（需送修）。<br>
+    ・請勿於潮濕或灰塵密集的空間使用，以免觸電或產品故障，並保持室內空氣流通。<br>
+    ・使用時請保持身體及雙手乾燥。<br>
+    ・請勿將產品放於枕頭或棉被中操作，勿覆蓋產品，保持出氣口通暢。<br>
+    ・請將產品遠離電熱器、瓦斯爐或陽光直射處。<br>
+    ・使用完畢或清潔前，請務必將電源插頭自插座拔除。<br>
+    ・身心功能障礙或傷殘者使用時，須有專人指導陪同。<br>
+    ・請放置於孩童無法取得之處（本產品非兒童玩具）。<br>
+    ・請於進食後 30 分鐘再使用本產品。<br>
+    ・按摩過程中若感覺身體不適，請立即停止使用。<br>
+    ・本產品不具任何治療效果。<br>
+    ・如有身體不適、懷孕或生理期間，請勿使用。<br>
+    ・使用於頭部時，請先將頭髮束起，避免纏繞危險。<br>
+    ・使用時請勿過度按壓，過度施力可能導致自動斷電或機器故障。<br>
+    ・每次使用時間為 15 分鐘，時間到機器將自動關閉，可重新啟動使用。<br>
+    ・如機器有破損或故障，請停止使用並送回維修中心檢修。<br>
+    ・使用完畢後，請務必拔除電源插頭。
+  </p>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">保養與收納</h3>
+  <p>
+    ・清潔前請關閉總開關並拔除電源插頭，避免潮濕環境與陽光直射。<br>
+    ・矽膠軟杯請以擰乾之濕布擦拭表面清潔。<br>
+    ・產品表面請使用乾淨柔軟棉布擦拭。<br>
+    ・主機請勿以水沖洗或浸泡。<br>
+    ・請勿使用具腐蝕性的清潔劑（如苯或稀釋清潔劑）。
+  </p>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">產品規格</h3>
+  <p>
+    本體尺寸：70 × 139 mm<br>
+    重量：580 g<br><br>
+    <strong>階段／轉速：</strong><br>
+    1. Low Speed：0.09A / 580 rpm<br>
+    2. Middle Speed：0.12A / 780 rpm<br>
+    3. High Speed：0.23A / 1470 rpm<br><br>
+    <strong>安規與電源：</strong><br>
+    電源電壓：AC 100–240V 50/60Hz 0.35A → DC 12V 1.0A<br>
+    額定電壓：DC 12V<br>
+    消耗功率：12W
+  </p>
+</div>
+
+  <div id="p2" style="display:none;">
+  <img src="comb.png" alt="磁波能量梳產品圖" style="width:220px; display:block; margin:0 auto 24px;">
+  <h2>磁波能量梳｜使用說明</h2>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">重要安全注意事項</h3>
+  <p>
+    1. 使用前請詳閱所有操作說明。<br>
+    2. 按摩應以舒適為原則，如出現疼痛或不適請立即停止並諮詢醫師。<br>
+    3. 單一部位按摩時間請勿超過 20 分鐘。<br>
+    4. 請勿於身體腫脹、發炎、出現皮疹或潰瘍部位使用。<br>
+  </p>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">操作方式</h3>
+  <p>
+    本產品可獨立或同時使用 LED 與振動功能。<br><br>
+    <strong>LED 功能：</strong><br>
+    按壓 LED 開關鍵即可開啟 LED，使用完畢再按一次關閉。<br><br>
+    <strong>振動功能：</strong><br>
+    第一次按壓：低速振動<br>
+    第二次按壓：高速振動<br>
+    第三次按壓：關閉振動<br><br>
+    LED 或振動其中一項功能啟動時，可再啟動另一功能進行雙功能梳理。
+  </p>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">充電注意事項</h3>
+  <p>
+    1. 第一次使用前請先充電 8 小時。<br>
+    2. 使用隨附充電線（Micro USB）連接 DC 5V USB 充電器（未附）。<br>
+    3. 充電時指示燈呈現呼吸燈狀態，充飽後為恆亮。<br>
+    4. 充電時無法啟動產品。<br>
+    5. 電量過低時指示燈閃爍，請立即充電。<br>
+    6. 連續使用 15 分鐘後，產品會自動關閉。
+  </p>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">保養與清潔</h3>
+  <p>
+    梳針可使用溫水與中性肥皂清洗，清潔後請徹底晾乾。<br>
+    梳子外殼可用乾布或微濕布沾中性肥皂擦拭。<br>
+    請勿使用化學或腐蝕性清潔劑。<br>
+    本產品不防水，請勿將整機浸泡於水中，亦不可於浴室或淋浴間使用。
+  </p>
+
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">產品資訊</h3>
+  <p>
+    品名：健康能量梳<br>
+    型號：BTD002<br>
+    材質：塑膠<br>
+    使用電源：DC 5V / 1A<br>
+    消耗功率：1W<br>
+    尺寸：25.5 × 8 × 5.5 cm<br>
+    重量：242g（含充電線）
+  </p>
+</div>
+  <div id="p3" style="display:none;"><img src="patch.jpg"><h2>260 能量貼布｜使用說明</h2></div>
+  <div id="p4" style="display:none;">
+  <img src="water_tank.png" alt="磁化整水缸產品圖" style="width:240px; display:block; margin:0 auto 24px;">
+  <h2>磁化整水缸｜產品說明</h2>
+
+  <h3>核心概念</h3>
+  <p>磁化整水缸以能量結構設計為核心，透過磁化技術作用於整體水體，使日常用水維持穩定且一致的磁化狀態，打造「能量滿整缸」的用水環境。</p>
+
+  <h3>運作原理</h3>
+  <p>系統啟動後，水體於缸內進行循環磁化作用，透過特定結構與磁場配置，讓水分子排列趨於穩定，形成良好的用水條件。整體運作為物理結構概念，非醫療用途。</p>
+
+  <h3>磁化水特性說明</h3>
+  <p>
+    ・改善水質口感，提升飲用與使用舒適度。<br>
+    ・有助於日常生活中清潔、烹調與用水體驗。<br>
+    ・適用於家庭及一般生活用水系統。
+  </p>
+
+  <h3>使用說明與提醒</h3>
+  <p>
+    ・本產品為物理結構設計之用水輔助設備。<br>
+    ・非醫療器材，亦不具治療效果。<br>
+    ・實際使用感受因環境與個人狀況而異。
+  </p>
+</div>
+
+<div id="p5" style="display:none;">
+  <img src="sixqi.png" alt="六氣口含錠產品圖" style="width:220px; display:block; margin:0 auto 24px;">
+  <h2>六氣丹原萃口含錠｜產品說明</h2>
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">產品資訊</h3>
+  <p>品名：六氣丹原萃口含錠<br>內容量：300 毫克 / 25 顆<br>產地：台灣<br>保存期限：二年</p>
+</div>
+
+<div id="p6" style="display:none;">
+  <img src="magic_tea.png" alt="神纖茶產品圖" style="width:220px; display:block; margin:0 auto 24px;">
+  <h2>神纖茶｜產品說明</h2>
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">產品特色</h3>
+  <p>嚴選草本配方，溫和順口，適合日常飲用，調整體質、輕盈無負擔。</p>
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">食用方式</h3>
+  <p>每包以 300–500 ml 熱水沖泡，靜置 3–5 分鐘後飲用，可依個人口味調整濃淡。</p>
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">注意事項</h3>
+  <p>・孕婦、特殊體質者請先諮詢專業人員。<br>・請置於陰涼乾燥處，避免陽光直射。<br>・本產品為一般食品，非藥品。</p>
+</div>
+
+<div id="p7" style="display:none;">
+  <img src="tea_drop.png" alt="六氣茶滴精產品圖" style="width:220px; display:block; margin:0 auto 24px;">
+  <h2>六氣茶滴精｜產品說明</h2>
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">產品特色</h3>
+  <p>濃縮茶萃精華，方便即飲，適合日常保養與外出使用。</p>
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">食用方式</h3>
+  <p>每日依需求滴入溫水或直接食用，實際用量依產品標示為準。</p>
+  <h3 style="font-size:18px;font-weight:700;margin:0;color:#333;">注意事項</h3>
+  <p>・孕婦、特殊體質者請先諮詢專業人員。<br>・請置於陰涼乾燥處保存。<br>・本產品為一般食品，非藥品。</p>
+</div>
+</body>
+</html>
